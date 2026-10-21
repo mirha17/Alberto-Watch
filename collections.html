@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Browse the Alberto Watch Company vintage, luxury and smart watch collections.">
+<title>Collections | Alberto Watch Company</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/member3.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="visually-hidden-focusable" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html" aria-label="Alberto Watch Company home"><svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="21" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M24 10.5 13.2 36h4.6l6.2-15.1L30.2 36h4.6L24 10.5Z" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"/><path d="M18.5 29.5h11" fill="none" stroke="currentColor" stroke-width="1.15"/></svg><span class="logo-copy"><span class="logo-name">ALBERTO</span><span class="logo-caption">WATCH COMPANY</span></span></a>
+    <div class="header-visitors"><div class="visitor-badge" id="visitorBadge" title="Total visitors"><span class="v-label">&#128065; Visitors</span><span class="v-count" id="visitorCount">000000</span></div></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav"><i class="fa-solid fa-bars"></i></button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation"><ul><li><a href="index.html">Home</a></li><li><a href="collections.html" class="active" aria-current="page">Collections</a></li><li><a href="technology.html">Technology</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="store-locator.html">Store Locator</a></li><li><a href="support.html">Support</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero"><span class="kicker">Curated with care &middot; Est. 1985</span><h1>Our Collections</h1><p>Explore 40 vintage, luxury and smart timepieces. Search, filter and sort to find the one for you.</p><div class="crumbs"><a href="index.html">Home</a> &nbsp;/&nbsp; Collections</div></section>
+<section class="section-pad" aria-label="Shop watches"><div class="container">
+  <div class="cat-pills"><button class="f-btn active" data-cat="all">All</button><button class="f-btn" data-cat="Vintage">Vintage</button><button class="f-btn" data-cat="Luxury">Luxury</button><button class="f-btn" data-cat="Smart Watches">Smart Watches</button></div>
+  <div class="shop-toolbar">
+    <p class="result-count" id="resultCount" aria-live="polite">Showing 40 timepieces</p>
+    <div class="toolbar-controls">
+      <input id="searchInput" class="form-control" type="search" placeholder="Search watches..." aria-label="Search watches">
+      <select id="categoryFilter" class="form-select" aria-label="Filter by collection"><option value="all">All collections</option><option>Vintage</option><option>Luxury</option><option>Smart Watches</option></select>
+      <select id="sortSelect" class="form-select" aria-label="Sort watches"><option value="featured">Sort: Featured</option><option value="low-high">Price: Low to High</option><option value="high-low">Price: High to Low</option><option value="name">Name: A to Z</option></select>
+    </div>
+  </div>
+  <div class="product-grid" id="productGrid" aria-live="polite"></div>
+  <p class="no-results" id="noResults" hidden>No watches found. Try another search or collection.</p>
+</div></section>
+<section class="cta-band"><span class="kicker">A good watch, a story that lasts</span><h2>Need help choosing?</h2><a class="btn-brown" href="contact.html">Talk to our experts</a></section>
+<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content">
+    <div class="modal-body p-0"><div class="row g-0">
+      <div class="col-md-6"><img id="pmImg" class="modal-img" src="" alt=""></div>
+      <div class="col-md-6 p-4 p-lg-5 position-relative">
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <span class="kicker" id="pmCat"></span>
+        <h2 class="modal-title-serif mb-2" id="pmName"></h2>
+        <p class="text-muted" id="pmDesc" style="font-size:14px;line-height:1.8"></p>
+        <table class="spec-table"><tbody id="pmSpecs"></tbody></table>
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3"><span class="modal-price" id="pmPrice"></span><a id="pmEnquire" class="btn-brown" href="contact.html">Enquire now</a></div>
+      </div>
+    </div></div>
+  </div></div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a class="logo mb-3" href="index.html"><svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="21" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M24 10.5 13.2 36h4.6l6.2-15.1L30.2 36h4.6L24 10.5Z" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"/><path d="M18.5 29.5h11" fill="none" stroke="currentColor" stroke-width="1.15"/></svg><span class="logo-copy"><span class="logo-name">ALBERTO</span><span class="logo-caption">WATCH COMPANY</span></span></a>
+        <p>Timeless watches, personal service and expert repair &mdash; crafting time in Karachi since 1985.</p>
+        <div class="social-row">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://youtu.be/l4fhKC6NkHA?si=QsS2JALAt3VEuIbz" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.tiktok.com/@albertomariabergo?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2 footer-links"><h4>Explore</h4><a href="index.html">Home</a><a href="collections.html">Collections</a><a href="technology.html">Technology</a><a href="gallery.html">Gallery</a></div>
+      <div class="col-6 col-lg-2 footer-links"><h4>Company</h4><a href="store-locator.html">Store Locator</a><a href="support.html">Support</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a><a href="sitemap.html">Sitemap</a></div>
+      <div class="col-lg-4"><h4>Visit Us</h4>
+        <p>47 Tariq Road, Gulshan-e-Iqbal<br>Karachi, Pakistan</p>
+        <p><i class="fa-solid fa-phone me-2"></i>+92 21 3498 7654<br><i class="fa-solid fa-envelope me-2"></i>info@albertowatches.com<br><i class="fa-solid fa-clock me-2"></i>Mon &ndash; Sat &middot; 10:00 AM &ndash; 7:00 PM</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Alberto Watch Company. All rights reserved.</div>
+</footer>
+<button id="toTop" class="to-top" aria-label="Back to top">&uarr;</button>
+<div class="ticker" id="ticker" aria-label="Date, time, location and weather"><div class="ticker-track"><span class="ticker-item"></span><span class="ticker-item"></span></div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/products.js"></script>
+<script src="js/member3.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
